@@ -26,8 +26,11 @@
                         </a>
                     </div>
                     <figcaption>
-                         <time datetime="{{date format="YYYY-MM-DD"}}"><strong>{{date published_at}}</strong></time>
+                       <a href="{{url}}"><strong>{{title}}</strong></a>
+                       <br/>
                         {{custom_excerpt}}
+                        <br/>
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                     </figcaption>
                 </figure>
                 {{/if}}
