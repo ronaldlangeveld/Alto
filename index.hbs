@@ -26,7 +26,7 @@
                         </a>
                     </div>
                     <figcaption>
-                       <a href="{{url}}"><strong>{{title}}</strong> {{#has visibility="member"}}MEMBERS ONLY{{/has}}</a>
+                      {{#has visibility="members"}}<strong>MEMBERS ONLY</strong> | {{/has}} <a href="{{url}}"><strong>{{title}}</strong></a>
                        <br/>
                         {{custom_excerpt}}
                         <br/>
