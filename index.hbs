@@ -26,10 +26,9 @@
                         </a>
                     </div>
                     <figcaption>
-                      {{#has visibility="members"}}<strong>MEMBERS ONLY</strong> | {{/has}} <a href="{{url}}"><strong>{{title}}</strong></a>
-                       <br/>
-                        {{custom_excerpt}}
-                        <br/>
+                      {{#has visibility="members"}}<strong>MEMBERS ONLY</strong> <br/>
+                      {{/has}} <a href="{{url}}"><h3>{{title}}</h3></a>
+                        <p><strong>{{custom_excerpt}}</strong></p>
                         <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                     </figcaption>
                 </figure>
