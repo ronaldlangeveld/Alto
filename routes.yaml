@@ -1,0 +1,17 @@
+routes:
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+    filter: 'featured:true+tag:gallery'
+    data: page.home
+  /posts/:
+    permalink: /{slug}/
+    template: posts
+    data: page.posts
+    filter: 'featured:false'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
