@@ -4,7 +4,7 @@ collections:
   /:
     permalink: /{slug}/
     template: index
-    filter: 'featured:true+tag:gallery'
+    filter: 'tag:gallery'
     data: page.home
   /posts/:
     permalink: /{slug}/

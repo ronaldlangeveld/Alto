@@ -26,10 +26,16 @@
                         </a>
                     </div>
                     <figcaption>
-                      {{#has visibility="members"}}<strong>MEMBERS ONLY</strong> <br/>
-                      {{/has}} <a href="{{url}}"><h3>{{title}}</h3></a>
+                        <div class="post-meta">
+                            {{#has visibility="members"}}
+                            <span class="post-meta-item post-meta-length">🔒 MEMBERS ONLY</span>
+                            {{/has}}
+                            <span class="post-meta-item post-meta-date">
+                                <time datetime="{{date format=" YYYY-MM-DD"}}">{{date published_at}}</time>
+                            </span>
+                        </div>
+                        <a href="{{url}}"><h3>{{title}}</h3></a>
                         <p><strong>{{custom_excerpt}}</strong></p>
-                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                     </figcaption>
                 </figure>
                 {{/if}}

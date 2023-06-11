@@ -19,12 +19,12 @@
                             <a class="post-title-link" href="{{url}}">{{title}}</a>
                         </h2>
                         <div class="post-meta">
+                            {{#has visibility="members"}}
+                            <span class="post-meta-item post-meta-length">🔒 MEMBERS ONLY</span>
+                            {{/has}}
                             <span class="post-meta-item post-meta-date">
                                 <time datetime="{{date format=" YYYY-MM-DD"}}">{{date published_at}}</time>
                             </span>
-                            {{#if reading_time}}
-                            <span class="post-meta-item post-meta-length">{{reading_time}}</span>
-                            {{/if}}
                             {{#if @site.comments_enabled}}
                             {{comment_count class="post-meta-item"}}
                             {{/if}}
