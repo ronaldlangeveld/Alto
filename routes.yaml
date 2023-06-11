@@ -10,7 +10,6 @@ collections:
     permalink: /{slug}/
     template: posts
     data: page.posts
-    filter: 'featured:false'
 
 taxonomies:
   tag: /tag/{slug}/
