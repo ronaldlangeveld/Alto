@@ -1,6 +1,4 @@
-{{!< default}}
-
-<div class="content-area">
+{{!< default}} <div class="content-area">
     <main class="site-main">
         <div class="post-feed">
             {{#page}}
@@ -23,7 +21,8 @@
                             <span class="post-meta-item post-meta-length">🔒 MEMBERS ONLY</span>
                             {{/has}}
                             <span class="post-meta-item post-meta-date">
-                                <time datetime="{{date format=" YYYY-MM-DD"}}"><strong style="color: rgb(61, 61, 61);">{{date published_at}}</strong></time>
+                                <time datetime="{{date format=" YYYY-MM-DD"}}"><strong
+                                        style="color: rgb(61, 61, 61);">{{date published_at}}</strong></time>
                             </span>
                             {{#if @site.comments_enabled}}
                             {{comment_count class="post-meta-item"}}
