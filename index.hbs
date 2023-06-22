@@ -1,6 +1,4 @@
-{{!< default}} 
-
-<div class="content-area">
+{{!< default}} <div class="content-area">
     <main class="site-main">
         <div class="post-feed">
             {{#page}}
@@ -13,35 +11,35 @@
             {{/page}}
             {{#foreach posts}}
             <div>
-            <article class="post">
-                {{#if feature_image}}
-                <figure class="kg-card kg-image-card kg-width-full kg-card-hascaption">
-                    <div class="u-placeholder horizontal kg-width-full">
-                        <a class="post-image-link" href="{{url}}">
-                            <img class="post-image u-object-fit" srcset="{{img_url feature_image size=" s"}} 400w,
-                                {{img_url feature_image size="m" }} 750w, {{img_url feature_image size="l" }} 960w,
-                                {{img_url feature_image size="xl" }} 1140w, {{img_url feature_image size="xxl" }} 1920w"
-                                sizes="(min-width: 960px) 960px, 92vw" src="{{img_url feature_image size=" l"}}"
-                                alt="{{title}}" loading="lazy">
-                        </a>
-                    </div>
-                    <figcaption>
-                        <div class="post-meta">
-                            {{#has visibility="members"}}
-                            <span class="post-meta-item post-meta-length">🔒 MEMBERS ONLY</span>
-                            {{/has}}
-                            <span class="post-meta-item post-meta-date">
-                                <time datetime="{{date format=" YYYY-MM-DD"}}">{{date published_at}}</time>
-                            </span>
+                <article class="post">
+                    {{#if feature_image}}
+                    <figure class="kg-card kg-image-card kg-width-full kg-card-hascaption">
+                        <div class="u-placeholder horizontal kg-width-full">
+                            <a class="post-image-link" href="{{url}}">
+                                <img class="post-image u-object-fit" srcset="{{img_url feature_image size=" xl"}} 1140w,
+                                    {{img_url feature_image size="xxl" }} 1920w" sizes="(min-width: 960px) 1140px, 92vw"
+                                    src="{{img_url feature_image size=" xl"}}" alt="{{title}}" loading="lazy">
+                            </a>
                         </div>
-                        <a href="{{url}}"><h3>{{title}}</h3></a>
-                        <div>
-                            {{feature_image_caption}}
-                        </div>
-                    </figcaption>
-                </figure>
-                {{/if}}
-            </article>
+                        <figcaption>
+                            <div class="post-meta">
+                                {{#has visibility="members"}}
+                                <span class="post-meta-item post-meta-length">🔒 MEMBERS ONLY</span>
+                                {{/has}}
+                                <span class="post-meta-item post-meta-date">
+                                    <time datetime="{{date format=" YYYY-MM-DD"}}">{{date published_at}}</time>
+                                </span>
+                            </div>
+                            <a href="{{url}}">
+                                <h3>{{title}}</h3>
+                            </a>
+                            <div>
+                                {{feature_image_caption}}
+                            </div>
+                        </figcaption>
+                    </figure>
+                    {{/if}}
+                </article>
             </div>
             {{/foreach}}
         </div>

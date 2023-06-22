@@ -13,13 +13,9 @@
             {{/if}}
             <figure class="kg-card kg-image-card kg-width-full">
                 <div class="u-placeholder horizontal kg-width-full">
-                    <a class="post-image-link" href="{{url}}">
-                        <img class="post-image u-object-fit" srcset="{{img_url feature_image size=" s"}} 400w, {{img_url
-                            feature_image size="m" }} 750w, {{img_url feature_image size="l" }} 960w, {{img_url
-                            feature_image size="xl" }} 1140w, {{img_url feature_image size="xxl" }} 1920w"
-                            sizes="(min-width: 960px) 960px, 92vw" src="{{img_url feature_image size=" l"}}"
-                            alt="{{title}}" loading="lazy">
-                    </a>
+                    <img class="post-image u-object-fit" srcset="{{img_url feature_image size=" xl"}} 1140w, {{img_url
+                        feature_image size="xxl" }} 1920w" sizes="(min-width: 960px) 1140px, 92vw"
+                        src="{{img_url feature_image size=" xl"}}" alt="{{title}}" loading="lazy">
                 </div>
             </figure>
             {{/if}}
@@ -41,7 +37,7 @@
                 {{content}}
                 <div class="post-meta">
                     <span class="post-meta-item post-meta-date">
-                      {{tags separator=" | "}}
+                        {{tags separator=" | "}}
                     </span>
                 </div>
             </div>
@@ -49,7 +45,7 @@
             {{#if @custom.show_author}}
             {{> "author-box"}}
             {{/if}}
-            
+
         </article>
 
         {{#if comments}}
