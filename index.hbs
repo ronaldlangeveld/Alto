@@ -2,9 +2,11 @@
     <main class="site-main">
         <div class="post-feed">
             {{#page}}
+            {{#match @page.show_title_and_feature_image}}
             <header class="article-header gh-canvas">
                 <h1 style="text-align:center;" class="page-title">{{title}}</h1>
             </header>
+            {{/match}}
             <div style="margin-bottom:50px;" class="gh-content gh-canvas">
                 {{content}}
             </div>
